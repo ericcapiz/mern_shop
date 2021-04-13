@@ -3,7 +3,12 @@ import './ProductScreen.css';
 const ProductScreen = () => {
     return (
         <div className="productscreen">
-            Products
+            <div className="productscreen__left">
+
+            </div>
+            <div className="productscreen__right">
+                
+            </div>
         </div>
     )
 }
