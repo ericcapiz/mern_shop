@@ -4,7 +4,7 @@ import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({click}) => {
     return (
         <nav className="navbar">
         <div className="navbar__logo">
@@ -26,7 +26,7 @@ const Navbar = () => {
                 </Link>
             </li>
         </ul>
-        <div className="hamburger__menu">
+        <div className="hamburger__menu" onClick={click}>
         <FontAwesomeIcon icon={faBars} />
         </div>
         </nav>
