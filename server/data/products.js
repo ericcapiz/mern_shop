@@ -53,6 +53,30 @@ const products = [
       price: 140,
       countInStock: 10,
     },
+    {
+      name: "HP 15.6 FHD IPS Flagship Laptop",
+      imageUrl:
+        "https://images-na.ssl-images-amazon.com/images/I/81-O6maZmjL._AC_SX425_.jpg",
+      description: "1th Gen Intel 4-Core i5-1135G7(Up to 4.2GHz, Beat i7-1060G7), 16GB RAM, 512GB PCIe SSD, Iris Xe Graphics, Fast Charge, WiFi, Lightweight,w/GM Accessories.",
+      price: 849,
+      countInStock: 13,
+    },
+    {
+      name: "LG OLED48CXPUB Alexa Built-In CX 48 4K Smart OLED TV",
+      imageUrl:
+        "https://images-na.ssl-images-amazon.com/images/I/A196kPpowTL._AC_SL1500_.jpg",
+      description: "LEAVE YOUR PHONE BEHND: Galaxy Watch3 gives you the freedom to call, text, stream music and get notifications via Bluetooth connectivity.",
+      price: 1449.99,
+      countInStock: 11,
+    },
+    {
+      name: "SAMSUNG Galaxy Watch 3",
+      imageUrl:
+        "https://images-na.ssl-images-amazon.com/images/I/81Iu41zFPwL._AC_SY500_.jpg",
+      description: "LG OLED TV: Only OLED pixels emit their own light, allowing for perfect black, intense color and stunning picture.",
+      price: 329,
+      countInStock: 5,
+    },
   ];
   
   module.exports = products;

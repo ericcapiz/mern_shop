@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
 import './SideDrawer.css'
@@ -8,6 +9,13 @@ const SideDrawer = ({show, click}) => {
     if(show){
         sideDrawerClass.push("show");
     }
+
+    const cart = useSelector(state => state.cart);
+    const {cartItems} = cart;
+
+    const getcartCount =() => {
+        return cartItems.reduce((qty, item) => qty + Number(item.qty), 0)
+    }
     return <div className={sideDrawerClass.join(" ")}>
         <ul className="sidedrawer__links" onClick={click}>
             <li>
@@ -15,7 +23,7 @@ const SideDrawer = ({show, click}) => {
                     <FontAwesomeIcon icon={faShoppingCart} />
                     <span>
                         Cart
-                        <span className="sidedrawer__cartbadge">0</span>
+                        <span className="sidedrawer__cartbadge">{getcartCount()}</span>
                     </span>
                 </Link>
             </li>

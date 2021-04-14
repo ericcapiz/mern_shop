@@ -21,11 +21,14 @@
 
 .info__price {
     font-weight: bold;
+    margin: 1rem 0;
 }
 
 .info__name{
+    margin: 1rem 0;
     font-size: 1rem;
     overflow: hidden;
+    font-weight: bold;
 }
 
 .info__description{

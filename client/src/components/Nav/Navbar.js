@@ -1,14 +1,24 @@
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
 import './Navbar.css'
 
 const Navbar = ({click}) => {
+
+    const cart = useSelector(state => state.cart);
+    const {cartItems} = cart;
+
+    const getcartCount =() => {
+        return cartItems.reduce((qty, item) => qty + Number(item.qty), 0)
+    }
     return (
         <nav className="navbar">
         <div className="navbar__logo">
-            <h2>Psi Shop</h2>
+            <Link className="nav__name" to="/">
+                <h2>Psi Shop</h2>
+            </Link>
         </div>
         <ul className="navbar__links">
             <li>
@@ -16,7 +26,7 @@ const Navbar = ({click}) => {
                     <FontAwesomeIcon icon={faShoppingCart} />
                     <span>
                         Cart
-                        <span className="cartlogo__badge">0</span>
+                        <span className="cartlogo__badge">{getcartCount()}</span>
                     </span>
                 </Link>
             </li>
